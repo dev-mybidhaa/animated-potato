@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalamu - Revision Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Kalamu</div>
+    <ul class="nav-links">
+      <li><a href="#assignments">Assignments</a></li>
+      <li><a href="#quizzes">Quizzes</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#audios">Audios</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+  <header class="hero">
+    <h1>Welcome to Kalamu</h1>
+    <p>Your interactive revision tool for assignments, quizzes, videos, and audios. Accessible, inclusive, and KICD-aligned.</p>
+    <button class="cta-btn" onclick="scrollToSection('assignments')">Get Started</button>
+  </header>
+  <main>
+    <section class="cards-section">
+      <div class="card" id="assignments">
+        <h2>Assignments</h2>
+        <p>View, complete, and track assignments. Get deadline reminders and feedback.</p>
+        <button onclick="showFeature('Assignments')">Explore</button>
+      </div>
+      <div class="card" id="quizzes">
+        <h2>Quizzes</h2>
+        <p>Take interactive quizzes with instant feedback and explanations. Supports multiple formats.</p>
+        <button onclick="showFeature('Quizzes')">Try a Quiz</button>
+      </div>
+      <div class="card" id="videos">
+        <h2>Videos</h2>
+        <p>Watch educational videos, with captions and playback controls. KICD-aligned content.</p>
+        <button onclick="showFeature('Videos')">Watch Now</button>
+      </div>
+      <div class="card" id="audios">
+        <h2>Audios</h2>
+        <p>Listen to audio resources, language clips, and more. Transcripts available for accessibility.</p>
+        <button onclick="showFeature('Audios')">Listen</button>
+      </div>
+    </section>
+    <section class="about-section" id="about">
+      <h2>About Kalamu</h2>
+      <p>Kalamu is a cross-platform revision tool designed for students and educators. It supports offline mode, accessibility features, and curriculum alignment. Enjoy a modern, interactive, and inclusive learning experience.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Kalamu. Inspired by <a href="https://kalamu.net/welcome" target="_blank">Kalamu</a>. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html> 

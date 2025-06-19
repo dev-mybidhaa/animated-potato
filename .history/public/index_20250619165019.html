@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalamu - Revision Tool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kalamuOrange: '#FF7A00',
+            kalamuBlue: '#0057B8',
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <nav class="flex justify-between items-center bg-[var(--tw-kalamuOrange,#FF7A00)] px-8 py-4 text-white">
+    <div class="text-2xl font-bold tracking-wide">Kalamu</div>
+    <ul class="flex gap-8 text-lg">
+      <li><a href="#assignments" class="hover:text-[var(--tw-kalamuBlue,#0057B8)] focus:text-[var(--tw-kalamuBlue,#0057B8)] transition-colors">Assignments</a></li>
+      <li><a href="#quizzes" class="hover:text-[var(--tw-kalamuBlue,#0057B8)] focus:text-[var(--tw-kalamuBlue,#0057B8)] transition-colors">Quizzes</a></li>
+      <li><a href="#videos" class="hover:text-[var(--tw-kalamuBlue,#0057B8)] focus:text-[var(--tw-kalamuBlue,#0057B8)] transition-colors">Videos</a></li>
+      <li><a href="#audios" class="hover:text-[var(--tw-kalamuBlue,#0057B8)] focus:text-[var(--tw-kalamuBlue,#0057B8)] transition-colors">Audios</a></li>
+      <li><a href="#about" class="hover:text-[var(--tw-kalamuBlue,#0057B8)] focus:text-[var(--tw-kalamuBlue,#0057B8)] transition-colors">About</a></li>
+    </ul>
+  </nav>
+  <header class="bg-gradient-to-r from-[var(--tw-kalamuOrange,#FF7A00)] to-[var(--tw-kalamuBlue,#0057B8)] text-white text-center py-16 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to Kalamu</h1>
+    <p class="text-lg md:text-xl mb-8">Your interactive revision tool for assignments, quizzes, videos, and audios. Accessible, inclusive, and KICD-aligned.</p>
+    <button class="bg-white text-[var(--tw-kalamuOrange,#FF7A00)] font-bold px-8 py-3 rounded-full text-lg shadow hover:bg-[var(--tw-kalamuBlue,#0057B8)] hover:text-white transition-colors" onclick="scrollToSection('assignments')">Get Started</button>
+  </header>
+  <main>
+    <section class="flex flex-wrap justify-center gap-8 my-12 px-4">
+      <div class="bg-white rounded-2xl shadow-lg border-2 border-[var(--tw-kalamuOrange,#FF7A00)] p-8 w-72 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl" id="assignments">
+        <h2 class="text-2xl font-bold text-[var(--tw-kalamuBlue,#0057B8)] mb-2">Assignments</h2>
+        <p class="mb-4">View, complete, and track assignments. Get deadline reminders and feedback.</p>
+        <button class="mt-2 bg-[var(--tw-kalamuOrange,#FF7A00)] text-white px-6 py-2 rounded-full font-semibold hover:bg-[var(--tw-kalamuBlue,#0057B8)] transition-colors" onclick="showFeature('Assignments')">Explore</button>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg border-2 border-[var(--tw-kalamuOrange,#FF7A00)] p-8 w-72 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl" id="quizzes">
+        <h2 class="text-2xl font-bold text-[var(--tw-kalamuBlue,#0057B8)] mb-2">Quizzes</h2>
+        <p class="mb-4">Take interactive quizzes with instant feedback and explanations. Supports multiple formats.</p>
+        <button class="mt-2 bg-[var(--tw-kalamuOrange,#FF7A00)] text-white px-6 py-2 rounded-full font-semibold hover:bg-[var(--tw-kalamuBlue,#0057B8)] transition-colors" onclick="showFeature('Quizzes')">Try a Quiz</button>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg border-2 border-[var(--tw-kalamuOrange,#FF7A00)] p-8 w-72 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl" id="videos">
+        <h2 class="text-2xl font-bold text-[var(--tw-kalamuBlue,#0057B8)] mb-2">Videos</h2>
+        <p class="mb-4">Watch educational videos, with captions and playback controls. KICD-aligned content.</p>
+        <button class="mt-2 bg-[var(--tw-kalamuOrange,#FF7A00)] text-white px-6 py-2 rounded-full font-semibold hover:bg-[var(--tw-kalamuBlue,#0057B8)] transition-colors" onclick="showFeature('Videos')">Watch Now</button>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg border-2 border-[var(--tw-kalamuOrange,#FF7A00)] p-8 w-72 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl" id="audios">
+        <h2 class="text-2xl font-bold text-[var(--tw-kalamuBlue,#0057B8)] mb-2">Audios</h2>
+        <p class="mb-4">Listen to audio resources, language clips, and more. Transcripts available for accessibility.</p>
+        <button class="mt-2 bg-[var(--tw-kalamuOrange,#FF7A00)] text-white px-6 py-2 rounded-full font-semibold hover:bg-[var(--tw-kalamuBlue,#0057B8)] transition-colors" onclick="showFeature('Audios')">Listen</button>
+      </div>
+    </section>
+    <section class="bg-[var(--tw-kalamuBlue,#0057B8)] text-white rounded-2xl max-w-3xl mx-auto my-8 py-8 px-4 text-center" id="about">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">About Kalamu</h2>
+      <p class="text-lg">Kalamu is a cross-platform revision tool designed for students and educators. It supports offline mode, accessibility features, and curriculum alignment. Enjoy a modern, interactive, and inclusive learning experience.</p>
+    </section>
+  </main>
+  <footer class="bg-gray-900 text-white text-center py-5 text-base tracking-wide">
+    <p>&copy; 2024 Kalamu. Inspired by <a href="https://kalamu.net/welcome" target="_blank" class="text-[var(--tw-kalamuOrange,#FF7A00)] underline">Kalamu</a>. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html> 

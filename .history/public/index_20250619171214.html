@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalamu - Revision Tool</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            kalamuBlue: '#2774c2',      // Main/header/nav
+            kalamuYellow: '#F0C860',    // Accent yellow
+            kalamuPurple: '#AEAAF9',    // Accent purple
+            kalamuTeal: '#52CCB9',      // Accent teal
+            kalamuBtnBlue: '#2D85DE',   // Button blue
+            kalamuLight: '#FAF7F5',     // Light background
+            kalamuGreenOverlay: '#48D774', // Light green overlay
+            kalamuWhite: '#FFFFFF',     // White
+          },
+          fontFamily: {
+            display: ['"Comic Sans MS"', 'Comic Sans', 'cursive', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-kalamuLight min-h-screen text-gray-900 font-display">
+  <div class="fixed inset-0 bg-kalamuGreenOverlay opacity-10 pointer-events-none z-0"></div>
+  <nav class="relative z-10 flex justify-between items-center bg-kalamuBlue px-8 py-4 text-white rounded-b-3xl shadow-lg">
+    <div class="text-3xl font-extrabold tracking-wide drop-shadow-lg flex items-center gap-2">
+      <span>🖍️</span> Kalamu
+    </div>
+    <ul class="flex gap-6 text-lg font-bold">
+      <li><a href="#assignments" class="hover:text-kalamuYellow focus:text-kalamuYellow transition-colors">Assignments</a></li>
+      <li><a href="#quizzes" class="hover:text-kalamuYellow focus:text-kalamuYellow transition-colors">Quizzes</a></li>
+      <li><a href="#videos" class="hover:text-kalamuYellow focus:text-kalamuYellow transition-colors">Videos</a></li>
+      <li><a href="#audios" class="hover:text-kalamuYellow focus:text-kalamuYellow transition-colors">Audios</a></li>
+      <li><a href="#about" class="hover:text-kalamuYellow focus:text-kalamuYellow transition-colors">About</a></li>
+    </ul>
+  </nav>
+  <header class="relative z-10 bg-kalamuBlue text-white text-center py-16 px-4 rounded-b-3xl shadow-lg">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-4 drop-shadow-lg">Welcome to Kalamu!</h1>
+    <p class="text-2xl md:text-3xl mb-8 font-semibold drop-shadow">Fun, interactive revision for kids—assignments, quizzes, videos, and audios. Accessible, inclusive, and KICD-aligned.</p>
+    <button class="bg-kalamuBtnBlue text-white font-extrabold px-10 py-4 rounded-full text-2xl shadow-lg hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-4 border-kalamuPurple" onclick="scrollToSection('assignments')">Start Learning!</button>
+  </header>
+  <main class="relative z-10">
+    <section class="flex flex-wrap justify-center gap-10 my-14 px-4">
+      <div class="bg-kalamuWhite rounded-3xl shadow-xl border-4 border-kalamuTeal p-10 w-80 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl flex flex-col items-center" id="assignments">
+        <div class="text-5xl mb-2">📚</div>
+        <h2 class="text-3xl font-extrabold text-kalamuBlue mb-2">Assignments</h2>
+        <p class="mb-4 text-lg font-semibold">View, complete, and track assignments. Get deadline reminders and feedback.</p>
+        <button class="mt-2 bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-2 border-kalamuPurple" onclick="showFeature('Assignments')">Explore</button>
+      </div>
+      <div class="bg-kalamuWhite rounded-3xl shadow-xl border-4 border-kalamuPurple p-10 w-80 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl flex flex-col items-center" id="quizzes">
+        <div class="text-5xl mb-2">📝</div>
+        <h2 class="text-3xl font-extrabold text-kalamuBlue mb-2">Quizzes</h2>
+        <p class="mb-4 text-lg font-semibold">Take interactive quizzes with instant feedback and explanations. Supports multiple formats.</p>
+        <button class="mt-2 bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-2 border-kalamuTeal" onclick="showFeature('Quizzes')">Try a Quiz</button>
+      </div>
+      <div class="bg-kalamuWhite rounded-3xl shadow-xl border-4 border-kalamuYellow p-10 w-80 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl flex flex-col items-center" id="videos">
+        <div class="text-5xl mb-2">🎬</div>
+        <h2 class="text-3xl font-extrabold text-kalamuBlue mb-2">Videos</h2>
+        <p class="mb-4 text-lg font-semibold">Watch educational videos, with captions and playback controls. KICD-aligned content.</p>
+        <button class="mt-2 bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-2 border-kalamuPurple" onclick="showFeature('Videos')">Watch Now</button>
+      </div>
+      <div class="bg-kalamuWhite rounded-3xl shadow-xl border-4 border-kalamuBlue p-10 w-80 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl flex flex-col items-center" id="audios">
+        <div class="text-5xl mb-2">🔊</div>
+        <h2 class="text-3xl font-extrabold text-kalamuBlue mb-2">Audios</h2>
+        <p class="mb-4 text-lg font-semibold">Listen to audio resources, language clips, and more. Transcripts available for accessibility.</p>
+        <button class="mt-2 bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-2 border-kalamuTeal" onclick="showFeature('Audios')">Listen</button>
+      </div>
+      <!-- Short Notes Card -->
+      <div class="bg-kalamuWhite rounded-3xl shadow-xl border-4 border-kalamuYellow p-10 w-80 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl flex flex-col items-center" id="notes">
+        <div class="text-5xl mb-2">🗒️</div>
+        <h2 class="text-3xl font-extrabold text-kalamuBlue mb-2">Short Notes</h2>
+        <p class="mb-4 text-lg font-semibold">Write, save, and view your quick notes for revision and reminders.</p>
+        <button class="mt-2 bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-2 border-kalamuPurple" onclick="openNotesModal()">Open Notes</button>
+      </div>
+      <!-- Games Card -->
+      <div class="bg-kalamuWhite rounded-3xl shadow-xl border-4 border-kalamuPurple p-10 w-80 text-center transition-transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl flex flex-col items-center" id="games">
+        <div class="text-5xl mb-2">🎮</div>
+        <h2 class="text-3xl font-extrabold text-kalamuBlue mb-2">Games</h2>
+        <p class="mb-4 text-lg font-semibold">Play fun games to relax and boost your brain power!</p>
+        <button class="mt-2 bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors border-2 border-kalamuTeal" onclick="openGamesModal()">Play Games</button>
+      </div>
+    </section>
+    <section class="bg-kalamuWhite text-kalamuBlue rounded-3xl max-w-3xl mx-auto my-10 py-10 px-6 text-center shadow-xl border-4 border-kalamuYellow" id="about">
+      <h2 class="text-3xl md:text-4xl font-extrabold mb-2">About Kalamu</h2>
+      <p class="text-xl font-semibold">Kalamu is a fun, cross-platform revision tool for kids, students, and educators. It supports offline mode, accessibility features, and curriculum alignment. Enjoy a playful, interactive, and inclusive learning experience!</p>
+    </section>
+  </main>
+  <footer class="bg-kalamuBlue text-white text-center py-6 text-lg tracking-wide rounded-t-3xl mt-10 shadow-inner">
+    <p>&copy; 2024 Kalamu. Inspired by <a href="https://kalamu.net/welcome" target="_blank" class="text-kalamuYellow underline">Kalamu</a>. All rights reserved.</p>
+  </footer>
+  <!-- Short Notes Modal -->
+  <div id="notesModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+    <div class="bg-kalamuWhite rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+      <button onclick="closeNotesModal()" class="absolute top-3 right-3 text-2xl text-kalamuBlue font-bold">&times;</button>
+      <h3 class="text-2xl font-extrabold text-kalamuBlue mb-4 flex items-center gap-2">🗒️ Short Notes</h3>
+      <textarea id="notesInput" class="w-full h-32 p-3 rounded-lg border-2 border-kalamuBlue focus:outline-none focus:border-kalamuBtnBlue text-lg mb-4" placeholder="Write your note here..."></textarea>
+      <div class="flex gap-2 mb-4">
+        <button onclick="saveNote()" class="bg-kalamuBtnBlue text-white px-4 py-2 rounded-lg font-bold hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors">Save Note</button>
+        <button onclick="clearNotes()" class="bg-kalamuPurple text-white px-4 py-2 rounded-lg font-bold hover:bg-kalamuTeal transition-colors">Clear All</button>
+      </div>
+      <div>
+        <h4 class="text-lg font-bold text-kalamuBlue mb-2">Saved Notes:</h4>
+        <ul id="notesList" class="list-disc pl-5 space-y-1 text-base text-gray-700"></ul>
+      </div>
+    </div>
+  </div>
+  <!-- Games Modal -->
+  <div id="gamesModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+    <div class="bg-kalamuWhite rounded-2xl shadow-2xl p-8 w-full max-w-md relative">
+      <button onclick="closeGamesModal()" class="absolute top-3 right-3 text-2xl text-kalamuBlue font-bold">&times;</button>
+      <h3 class="text-2xl font-extrabold text-kalamuBlue mb-4 flex items-center gap-2">🎮 Play a Game</h3>
+      <div id="gameArea" class="flex flex-col items-center">
+        <p class="mb-4 text-lg font-semibold">Click Counter Game: How many times can you click?</p>
+        <div class="text-4xl font-extrabold text-kalamuBtnBlue mb-2" id="clickCount">0</div>
+        <button onclick="incrementClick()" class="bg-kalamuBtnBlue text-white px-8 py-3 rounded-full font-extrabold text-xl shadow hover:bg-kalamuYellow hover:text-kalamuBlue transition-colors mb-4">Click Me!</button>
+        <button onclick="resetClick()" class="bg-kalamuPurple text-white px-4 py-2 rounded-lg font-bold hover:bg-kalamuTeal transition-colors">Reset</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html> 

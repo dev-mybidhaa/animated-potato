@@ -1,0 +1,256 @@
+Software Requirements Specification (SRS)
+Document
+Document Title: Revision Tool with Assignments, Quizzes, Videos, and Audios
+Version: 1.0
+Date: [Insert Date]
+Prepared by: [Your Name]
+Approved by: [Approver Name]
+
+1. Introduction
+1.1 Purpose
+This document outlines the requirements for a Revision Tool that helps
+students prepare for exams by providing assignments, quizzes, videos, and
+audio resources.
+1.2 Scope
+The system will:
+ Allow students to access and complete assignments.
+ Provide interactive quizzes with instant feedback.
+ Include multimedia resources (videos &amp; audios) for better learning.
+ Track progress and performance.
+ Be accessible via web and mobile platforms.
+1.3 Definitions
+ SRS: Software Requirements Specification
+ User: Student or educator using the system.
+ Quiz: A set of questions with multiple-choice, true/false, or short-answer
+formats.
+
+ Assignment: A task given to students to assess understanding.
+ Multimedia: Videos and audio clips for learning.
+
+2. Overall Description
+2.1 User Needs
+ Students need a structured way to revise topics.
+ Educators need a tool to assign and track student progress.
+ The system should support different learning styles (visual, auditory).
+2.2 System Features
+ Assignments Module
+ Quizzes Module
+ Multimedia (Videos &amp; Audios) Module
+ Progress Tracking
+ User Authentication
+2.3 Assumptions &amp; Constraints
+ Users have basic internet access.
+ Mobile responsiveness is required.
+ System should support at least 100 concurrent users.
+
+3. Functional Requirements
+3.1 User Authentication
+ID Requirement Priority
+FR1 Users can register/login via email or social accounts. High
+
+FR2 Password recovery option available. Medium
+
+3.2 Assignments Module
+ID Requirement Priority
+FR3 Students can view and submit assignments. High
+FR4 Educators can upload and grade assignments. High
+FR5 Deadline reminders for assignments. Medium
+3.3 Quizzes Module
+ID Requirement Priority
+FR6 Multiple-choice, true/false, and short-answer quizzes. High
+FR7 Instant feedback and explanations after submission. High
+FR8 Randomize questions to prevent cheating. Medium
+3.4 Multimedia Module
+ID Requirement Priority
+FR9 Upload and stream educational videos. High
+FR10 Play audio clips (e.g., language pronunciation). High
+FR11 Allow playback speed control. Medium
+3.5 Progress Tracking
+ID Requirement Priority
+FR12 Dashboard showing quiz scores and assignment status. High
+FR13 Generate performance reports. Medium
+
+4. Non-Functional Requirements
+4.1 Performance
+ The system should load quizzes in under 3 seconds.
+ Video streaming should support 720p quality without buffering.
+4.2 Security
+ User data must be encrypted (SSL/TLS).
+ Only authorized users can upload content.
+4.3 Usability
+ Intuitive UI for students and educators.
+ Mobile-friendly design.
+4.4 Compatibility
+ Works on Chrome, Firefox, Safari, and Edge.
+ Supports Android and iOS for mobile access.
+
+5. System Models
+5.1 Use Case Diagram
+(Include a diagram showing interactions between students, educators, and the
+system.)
+5.2 Data Flow Diagram
+(Show how data moves between modules.)
+
+6. Future Enhancements
+ Gamification (badges, leaderboards).
+ AI-based personalized recommendations.
+ Offline access mode.
+
+7. Conclusion
+This SRS document defines the requirements for a Revision Tool that
+integrates assignments, quizzes, videos, and audios to enhance learning. The
+system will be user-friendly, secure, and scalable for future improvements.
+Approval Signatures:
+ Developer: ___________________
+ Client: ___________________
+
+This template ensures clarity in requirements and serves as a foundation for
+development. Let me know if you need modifications! ��
+Give me more features we can add very simply as per development assistive
+features, content that speaks to disabilities
+Here are additional features that can be easily integrated into your Revision
+Tool SRS Document to make it more accessible and disability-friendly while
+keeping development simple:
+
+Enhanced Accessibility &amp; Disability-Friendly Features
+
+1. Assistive Features for Visually Impaired Users
+ID Feature Priority
+AF1 Screen Reader Compatibility (Supports NVDA, JAWS, VoiceOver) High
+AF2 High-Contrast Mode (Dark/Light themes with adjustable colors) Medium
+AF3 Text-to-Speech (TTS) for Quizzes &amp; Assignments (Reads questions
+aloud) High
+AF4 Keyboard Navigation Support (Full tab navigation, no mouse
+dependency) High
+AF5 Adjustable Font Sizes &amp; Dyslexia-Friendly Fonts (OpenDyslexic option) Medium
+2. Features for Hearing-Impaired Users
+ID Feature Priority
+AF6 Closed Captions (CC) for Videos (Manual &amp; auto-generated) High
+AF7 Transcripts for Audio Clips (Downloadable text versions) High
+AF8 Visual Alerts for Notifications (Flashing lights for deadlines) Medium
+3. Cognitive &amp; Motor Disability Support
+ID Feature Priority
+AF9 Simplified UI Option (Minimalist layout for ADHD/Autism) Medium
+AF10 Voice Commands (Basic navigation via speech) Low
+AF11 Extra Time for Quizzes (Customizable time limits) Medium
+AF12 Predictive Text &amp; Autocomplete (For assignment submissions) Low
+4. Content Adaptations
+ID Feature Priority
+AF13 Alt Text for Images (Descriptions for diagrams/charts) High
+AF14 Sign Language Videos (For key concepts) Medium
+
+AF15 Glossary Tooltips (Definitions on hover for complex terms) Low
+
+Implementation Notes for Developers
+ Use semantic HTML (&lt;header&gt;, &lt;nav&gt;, ARIA labels) for screen readers.
+ Leverage existing libraries like:
+o Axe for accessibility testing.
+o Web Speech API for TTS.
+o Vimeo/YouTube for auto-captions.
+ WCAG 2.1 Compliance (At least Level AA).
+
+SRS Document Updates
+Add these features under:
+ Section 3.6 (Accessibility Module) in Functional Requirements.
+ Section 4.3 (Usability) in Non-Functional Requirements.
+Would you like me to refine any specific part (e.g., wireframes, use cases)? ��
+Example Use Case:
+UC-10: Submit Assignment via Voice Command
+Actor: Motor-impaired student
+Steps:
+1. Student says, “Submit assignment.”
+2. System confirms, “Which assignment?”
+3. Student speaks assignment name.
+4. System submits and confirms.
+
+Let me know if you&#39;d like to prioritize certain features! ♿✨
+Please also add that it should be mobile &amp; web compatible and can be used
+offline and online have KICD Aligned material and other general knowledge
+resources
+Here’s the updated SRS document with your requested
+additions—offline/online support, mobile &amp; web compatibility, KICD-
+aligned content, and general knowledge resources—integrated seamlessly:
+
+Software Requirements Specification (SRS)
+Document
+Document Title: Revision Tool with Assignments, Quizzes, Videos, and Audios
+Version: 2.0
+Updates: Offline mode, KICD alignment, cross-platform support
+
+1. Introduction
+1.2 Scope (Expanded)
+The system will:
+ Support web and mobile (Android/iOS) platforms.
+ Function offline (sync when online) for low-connectivity areas.
+ Include KICD-aligned curriculum materials (CBC &amp; 8-4-4).
+ Offer general knowledge resources (e.g., current affairs, life skills).
+
+2. Overall Description
+2.2 System Features (New Additions)
+ Cross-Platform Access
+o Responsive design for mobile, tablet, and desktop.
+o Progressive Web App (PWA) for offline use.
+ Curriculum Alignment
+o KICD-approved content tagging (by grade/subject).
+o General knowledge library (e.g., quizzes on history, science).
+ Offline Mode
+o Download assignments, quizzes, videos for offline use.
+o Auto-sync progress when reconnected.
+
+3. Functional Requirements (New Sections)
+3.6 Cross-Platform &amp; Offline Support
+ID Requirement Priority
+FR14 Works on Android, iOS, and web browsers. High
+FR15 PWA installable for offline access (Google Lighthouse compliant). High
+FR16 Background sync for updated content when online. Medium
+3.7 Curriculum &amp; General Knowledge
+ID Requirement Priority
+FR17 Filter content by KICD grade/subject (e.g., Grade 6 Maths). High
+FR18 General knowledge section (e.g., &quot;Today in History&quot; quizzes). Medium
+FR19 Educator portal to upload KICD-aligned resources. High
+
+4. Non-Functional Requirements (Updates)
+4.1 Performance
+ Offline mode loads cached content in &lt;2 seconds.
+ PWA passes Core Web Vitals (Lighthouse score &gt;90).
+4.5 Compatibility (Expanded)
+ Mobile: Android 9+, iOS 13+.
+ Web: Chrome, Firefox, Safari, Edge.
+ Offline Storage: 500MB minimum cache allowance.
+4.6 Content Compliance
+ KICD metadata tagging for all educational materials.
+ General knowledge sources cited (e.g., BBC, Britannica).
+
+5. System Models (New Use Cases)
+5.1 Use Case: Offline Quiz Attempt
+Actor: Student in low-connectivity area
+Steps:
+1. Downloads quiz while online.
+2. Attempts quiz offline (timer runs locally).
+3. Answers auto-submit when back online.
+5.2 Use Case: Access KICD-Aligned Video
+Actor: Teacher
+Steps:
+
+1. Filters resources by &quot;Grade 3 Science, KICD 2024&quot;.
+2. Downloads video for classroom use.
+
+6. Future Enhancements
+ AI-Driven KICD Updates: Notify teachers of curriculum changes.
+ Community Contributions: Crowdsourced general knowledge quizzes.
+
+7. Conclusion
+The tool now ensures universal access (online/offline, mobile/web), regulatory
+compliance (KICD), and diverse learning (general knowledge).
+Approval Signatures:
+ Developer: ___________________
+ KICD Representative: ___________________
+
+Key Implementation Notes
+1. Offline Tech Stack:
+o Service Workers (PWA) for caching.
+o SQLite for local storage (mobile).
+2. KICD Alignment:
+o Partner with KICD for API access to approved resources.
+3. General Knowledge:
+o Use RSS feeds/news APIs for current affairs.
