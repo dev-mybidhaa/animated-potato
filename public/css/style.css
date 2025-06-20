@@ -1,1 +1,141 @@
+/* Kalamu Mascot Animation Placeholder */
+.kalamu-mascot-animation {
+  width: 120px;
+  height: 120px;
+  margin: 2rem auto 0 auto;
+  background: url('../img/kalamu-mascot.png') center/contain no-repeat, linear-gradient(135deg, #F0C860 60%, #AEAAF9 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 24px rgba(39,116,194,0.10);
+  animation: mascot-bounce 2s infinite;
+}
+@keyframes mascot-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px) scale(1.05); }
+}
 
+/* --- Signup/Login Fun Styles --- */
+.signup-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--kalamu-light);
+}
+.signup-container {
+  background: var(--kalamu-white);
+  border-radius: 2rem;
+  box-shadow: 0 4px 24px rgba(39,116,194,0.10);
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.signup-step {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.signup-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--kalamu-blue);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-display);
+}
+.signup-desc {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.signup-btn {
+  background: var(--kalamu-btn-blue);
+  color: var(--kalamu-white);
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 0.8rem 2.2rem;
+  margin: 0.5rem 0.3rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.signup-btn:hover, .signup-btn:focus {
+  background: var(--kalamu-yellow);
+  color: var(--kalamu-blue);
+}
+.grade-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+}
+.grade-btn {
+  background: var(--kalamu-purple);
+  color: var(--kalamu-blue);
+  border: none;
+  border-radius: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.grade-btn:hover, .grade-btn:focus {
+  background: var(--kalamu-teal);
+  color: var(--kalamu-white);
+}
+.interests-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.interest-item {
+  background: var(--kalamu-yellow);
+  color: var(--kalamu-blue);
+  border-radius: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.interest-item input[type="checkbox"] {
+  accent-color: var(--kalamu-purple);
+  margin-right: 0.3rem;
+}
+.interest-icon {
+  font-size: 1.3rem;
+}
+.signup-input {
+  width: 90%;
+  padding: 0.7rem 1rem;
+  border-radius: 1.2rem;
+  border: 2px solid var(--kalamu-blue);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+}
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 1.2rem 0.5rem;
+  }
+  .kalamu-mascot-animation {
+    width: 80px;
+    height: 80px;
+  }
+}
